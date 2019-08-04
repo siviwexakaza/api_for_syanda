@@ -64,7 +64,7 @@ router.put('/:id',(req,res)=>{
 });
 
 //delete clent
-router.delete('/',(req,res)=>{
+router.delete('/:id',(req,res)=>{
 
     Client.findById(req.params.id).then((client)=>{
         client.delete().then((delCli)=>{
